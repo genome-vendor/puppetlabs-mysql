@@ -33,7 +33,7 @@ class mysql::params {
             $provider = 'mysql'
           }
         }
-        'RedHat': {
+        /^(RedHat|CentOS|Scientific|OracleLinux)$/: {
           if $::operatingsystemrelease >= 7 {
             $provider = 'mariadb'
           } else {
